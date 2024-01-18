@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recomended Mess</title>
+    <link rel="stylesheet" href="listing.css" />
+    <style></style>
+    <script
+      src="https://kit.fontawesome.com/399b459aeb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  
+  <body>
+    <nav id="navBar" class="navbar-white">
+      <a href="index.html">
+        <img class="logo" src="img/logo.png" class="logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Recomended Mess</a></li>
+        <li class="Search-li">
+          <input
+            autocapitalize="On"
+            autocomplete="off"
+            id="Search"
+            type="text"
+          /><img
+            class="Search-img"
+            onclick="Search()"
+            src="img/loupe.png"
+            alt="Search"
+          />
+        </li>
+      </ul>
+      <a href="registrationForm.html" class="register-btn">Register Now</a>
+      <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+    </nav>
+    <div class="container">
+      <div class="list-container">
+        <div class="left-col">
+          <p>100+ Option</p>
+          <h1>Recomended Mess in Your Area</h1>
+          <div id="Lists"></div>
+        </div>
+        <div class="right-col">
+          <div class="sidebar">
+            <h2>Select Filters</h2>
+            <h3>View Mess type</h3>
+            <div class="filter">
+              <input id="veg" onclick="filters('Veg')" type="checkbox" />
+              <p>Pure Veg</p>
+              <span>(0)</span>
+            </div>
+            <div class="filter">
+              <input id="non-Veg" onclick="filters('non-Veg')" type="checkbox" />
+              <p>Pure Non Veg</p>
+              <span>(0)</span>
+            </div>
+            <div class="filter">
+              <input id="Veg/Non-Veg" onclick="filters('Veg/Non-Veg')" type="checkbox" />
+              <p>Veg and Non Veg</p>
+              <span>(0)</span>
+            </div>
+            <h3>Facilities</h3>
+            <div class="filter">
+              <input id="dine-in"  onclick="facility('Dine In')" type="checkbox" />
+              <p>Dine In</p>
+              <span>(0)</span>
+            </div>
+            <div class="filter">
+              <input id="take-away"  onclick="facility('Take Away')" type="checkbox" />
+              <p>Take Away</p>
+              <span>(0)</span>
+            </div>
+            <div class="filter">
+              <input id="delivery" onclick="facility('Delivery')" type="checkbox" />
+              <p>Delivery</p>
+              <span>(0)</span>
+            </div>
+
+            <div class="sidebar-link">
+              <a href="mess.html">View Options</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="pagination">
+        <img id="left-arr" src="img/arrow.png" />
+        <span class="current-page" id="first-page">1</span>
+        <span class="current-page" id="second-page">2</span>
+        <span class="current-page" id="third-page">3</span>
+        <span class="current-page" id="fourth-page">4</span>
+        <span class="current-page" id="fifth-page">5</span>
+        <span class="current-page" id="Sixth-page">6</span>
+        <img
+          onclick="arrClick()"
+          id="right-arr"
+          src="img/arrow.png"
+          class="right-arrow"
+        />
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="left">
+        <ul>
+          <li><a href="">Service</a></li>
+          <li><a href="">Mess Booking</a></li>
+          <li><a href="">Room Booking</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Service</a></li>
+          <li><a href="">Mess Booking</a></li>
+          <li><a href="">Room Booking</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <div class="adress">
+          <h2>Adress</h2>
+          <div class="ul-div">
+            <ul>
+              <li>Civil Lines, 42</li>
+              <li>Ladies Squre</li>
+              <li>Nagpur City, 445003</li>
+            </ul>
+          </div>
+        </div>
+        <img class="adressimg" src="img/map.jpg" alt="map" />
+      </div>
+    </footer>
+    <script src="Hosteldata.js"></script>
+  </body>
+</html>

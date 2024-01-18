@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 24px;
+      }
+
+      .nav-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .nav-list li {
+        margin-right: 20px;
+      }
+
+      .nav-list a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .hamburger {
+        display: none;
+        /* Initially hide on larger screens */
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .nav-list {
+          display: none;
+          /* Hide the navigation links on smaller screens */
+          flex-direction: column;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background-color: #333;
+        }
+
+        .nav-list.show {
+          display: flex;
+        }
+
+        .nav-list li {
+          margin: 10px 0;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <title>Your Website</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Your Logo</div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger">&#9776;</div>
+    </header>
+
+    <!-- Rest of your website content -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      	const hamburger = document.querySelector('.hamburger');
+      	const navList = document.querySelector('.nav-list');
+
+      	hamburger.addEventListener('click', function () {
+      		navList.classList.toggle('show');
+      	});
+
+      	// Close the navigation menu when a link is clicked
+      	document.querySelectorAll('.nav-list a').forEach(function (link) {
+      		link.addEventListener('click', function () {
+      			navList.classList.remove('show');
+      		});
+      	});
+      });
+    </script>
+  </body>
+</html>
